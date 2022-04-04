@@ -30,3 +30,6 @@ jobs:
           
       - name: build maven project
         run: mvn clean install -DskipTests
+        
+      - name: run project
+        run: java -cp "target/lib/*;target/classes" virtusa.gto.githubactions.testinggithubactions.App
