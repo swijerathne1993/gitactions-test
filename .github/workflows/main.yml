@@ -44,9 +44,9 @@ jobs:
             username: githubactions2022@gmail.com
             password: S@932583020v1
             subject: Test Mail for git Actions
-            to: swijerathne@virtusa.com,ssubhasinghe@virtusa.com
+            to: swijerathne@virtusa.com,rdissanayake@virtusa.com
             from: githubactions2022@gmail.com
             secure: true
             body: Build job of ${{github.repository}} completed successfully!
             ignore_cert: true
-            priority: low
+            priority: high
