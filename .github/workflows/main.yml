@@ -29,4 +29,4 @@ jobs:
           java-version: 11
           
       - name: build maven project
-        run: mvn -Dmaven.test.failure.ignore clean install
+        run: mvn clean install -DskipTests
