@@ -48,6 +48,5 @@ jobs:
             from: githubactions2022@gmail.com
             secure: true
             body: Build job of ${{github.repository}} completed successfully!
-            html_body: file://README.html
             ignore_cert: true
             priority: high
