@@ -35,3 +35,19 @@ jobs:
         
       - name: run project
         run: java -cp "target/lib/*;target/classes" virtusa.gto.githubactions.testinggithubactions.App
+        
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+            server_address: smtp.gmail.com
+            server_port: 465
+            username: githubactions2022@gmail.com
+            password: S@932583020v1
+            subject: Test Mail for git Actions
+            to: swijerathne@virtusa.com,ssubhasinghe@virtusa.com
+            from: githubactions2022@gmail.com
+            secure: true
+            body: Build job of ${{github.repository}} completed successfully!
+            html_body: file://README.html
+            ignore_cert: true
+            priority: high
