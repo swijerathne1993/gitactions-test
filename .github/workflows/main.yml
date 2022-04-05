@@ -39,8 +39,8 @@ jobs:
       - name: run project
         run: java -cp "target/lib/*;target/classes" virtusa.gto.githubactions.testinggithubactions.App
         
-      - name: print input values
-        run: echo ${{ env.name }}
+      - name: parameterized the script and pass values to a bat
+        run: testBat.bat ${{env.name}}
         
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
