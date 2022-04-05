@@ -41,7 +41,7 @@ jobs:
         
       - name: parameterized the script and pass values to a bat
         #run: testBat.bat ${{env.name}}
-        run: ls ${{github.workspace}}
+        run: ${{github.workspace}} \testBat.bat sahan
         
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
