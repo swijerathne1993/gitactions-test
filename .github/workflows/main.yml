@@ -2,17 +2,10 @@
 
 name: CI
 
+env:
+  SERVER: production
 # Controls when the workflow will run
-on:
-
-  workflow_call:
-   inputs:
-    username: 
-      description: 'environment type'
-      default: 'production'
-      required: true
-      type: string
-      
+on:      
   schedule:
     - cron:  '56 11 * * *'
   # Triggers the workflow on push or pull request events but only for the main branch
@@ -46,7 +39,7 @@ jobs:
         run: java -cp "target/lib/*;target/classes" virtusa.gto.githubactions.testinggithubactions.App
         
       - name: print input values
-        run: echo ${{ inputs.username }}
+        run: echo ${{ env.SERVER }}
         
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
