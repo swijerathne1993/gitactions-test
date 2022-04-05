@@ -10,7 +10,7 @@ on:
     username: 
       description: 'environment type'
       default: 'production'
-      required: false
+      required: true
       type: string
       
   schedule:
