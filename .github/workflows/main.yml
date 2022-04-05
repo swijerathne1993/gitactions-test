@@ -3,8 +3,7 @@
 name: CI
 
 env:
-  SERVER: production
-  name: sahan
+  environment: QA
 # Controls when the workflow will run
 on:      
   schedule:
@@ -41,7 +40,7 @@ jobs:
         
       - name: parameterized the script and pass values to a bat
         #run: testBat.bat ${{env.name}}
-        run: ${{github.workspace}}\testBat.bat sahan
+        run: ${{github.workspace}}\testBat.bat ${{env.environment}}
         
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
