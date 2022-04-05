@@ -41,7 +41,7 @@ jobs:
         
       - name: parameterized the script and pass values to a bat
         #run: testBat.bat ${{env.name}}
-        run:  echo $PROJECT_ROOT
+        run: echo ${{GITHUB_WORKSPACE}} 
         
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
