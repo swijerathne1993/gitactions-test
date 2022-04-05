@@ -41,7 +41,7 @@ jobs:
         
       - name: parameterized the script and pass values to a bat
         #run: testBat.bat ${{env.name}}
-        run: testBat.bat sahan
+        run:  echo $PROJECT_ROOT
         
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
