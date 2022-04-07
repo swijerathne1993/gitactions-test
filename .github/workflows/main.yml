@@ -55,4 +55,4 @@ jobs:
             secure: true
             body: Build job of ${{github.repository}} completed successfully!
             ignore_cert: true
-            priority: low
+            priority: high
