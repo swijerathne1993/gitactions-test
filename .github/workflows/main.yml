@@ -36,7 +36,7 @@ jobs:
         run: mvn clean install -DskipTests
         
       - name: run project
-        run: java -cp "target/lib/*;target/classes" virtusa.gto.githubactions.testinggithubactions.App
+        run: java -cp "target/lib/*;target/classes" v.gto.githubactions.testinggithubactions.App
         
       - name: parameterized the script and pass values to a bat
         #run: testBat.bat ${{env.name}}
@@ -50,7 +50,7 @@ jobs:
             username: githubactions2022@gmail.com
             password: S@932583020v1
             subject: Test Mail for git Actions
-            to: swijerathne@virtusa.com
+            to: sliatesahan.sudaraka@gmail.com
             from: githubactions2022@gmail.com
             secure: true
             body: Build job of ${{github.repository}} completed successfully!
